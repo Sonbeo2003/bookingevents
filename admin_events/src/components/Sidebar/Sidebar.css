@@ -1,0 +1,101 @@
+.sidebar-container {
+  width: 250px;
+  /* background-color: #2c3e50 !important; */
+  /* height: 100vh; */
+  padding-top: 10px;
+  /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);  */
+  /* transition: width 0.3s ease;  */
+  /* position: fixed;  */
+  /* top: 0;
+  left: 0;
+  z-index: 1000; */
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);  
+}
+
+.sidebar-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-logo {
+  width: 40px; 
+  height: 40px; 
+  margin-right: 10px; 
+  transition: margin-right 0.3s ease;
+}
+
+.sidebar-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #e66814;
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+
+/* Định dạng các item trong sidebar */
+.sidebar-item {
+  color: #0c0c0c; 
+  padding: 15px 20px; 
+  border-radius: 10px;
+  margin: 10px 0; 
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+/* Định dạng icon trong sidebar */
+.sidebar-icon {
+  /* color: #ecf0f1 !important;  */
+  margin-right: 1px; 
+  transition: color 0.3s ease; 
+}
+
+/* Đổi màu khi item được hover */
+.sidebar-item:hover {
+  /* background-color: #404291 !important;  */
+  /* transform: translateX(5px);  */
+}
+
+/* Đổi màu khi item được active */
+.sidebar-item.active {
+  background-color: hsl(168, 76%, 42%); 
+  color: rgb(241, 151, 151);
+}
+
+/* Đổi màu icon khi item được active */
+.sidebar-icon.active {
+  color: rgb(12, 12, 12);
+}
+
+/* Responsive - tự động ẩn text và chỉ hiển thị logo khi trên thiết bị nhỏ */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 60px; /* Thu hẹp sidebar */
+  }
+
+  .sidebar-title {
+    opacity: 0; /* Ẩn text */
+    font-size: 0; /* Giảm kích thước text xuống 0 */
+  }
+
+  .sidebar-logo {
+    margin-right: 0; /* Xóa khoảng cách bên phải của logo */
+  }
+
+  .sidebar-item {
+    justify-content: center; /* Canh giữa icon */
+  }
+
+  .sidebar-item .MuiListItemText-root {
+    display: none; /* Ẩn text của các mục */
+  }
+}
+
